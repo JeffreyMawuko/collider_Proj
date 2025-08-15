@@ -14,5 +14,9 @@ The VNet **ProdvNet** with backend and frontend subnets plus a dedicated appsvc 
 
 A Logic App (managed identity) that queries Azure Policy (PCI DSS) daily. A repo .tfsec.yml so you can run tfsec. locally. Optional **PCI DSS** policy assignment at the RG scope (supply the built-in initiative ID via pci_policy_set_definition_id).
 
+## SQL Database
+
+The SQL admin password is generated and stored in Key Vault. The apps fetch the full connection string via KV reference; nothing is output to the console.
+
 
 Contact: info@VtechUB4dev.com
