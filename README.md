@@ -1,6 +1,6 @@
-# collider_Project
+# Collider_Project
 
-This is a project for balance and forge africa-appservices
+This is a project for balance and forge Africa-appservices
 
 Architecture Design
 
@@ -17,6 +17,17 @@ A Logic App (managed identity) that queries Azure Policy (PCI DSS) daily. A repo
 ## SQL Database
 
 The SQL admin password is generated and stored in Key Vault. The apps fetch the full connection string via KV reference; nothing is output to the console.
+
+
+**Next steps**
+1. Commit these files to a new repo root.
+2. Optionally add a `terraform.tfvars` with:
+```hcl
+prefix = "forge"
+location = "northeurope"
+# pci_policy_set_definition_id = "/providers/Microsoft.Authorization/policySetDefinitions/<PCI_DSS_ID>"
+```
+3. Run `terraform init && terraform plan && terraform apply`. If using GitHub Actions, add a simple workflow to run on push (I can add that too if you want).
 
 
 Contact: info@VtechUB4dev.com
