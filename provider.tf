@@ -1,0 +1,4 @@
+hcl
+provider "azurerm" {
+  features {}
+}
